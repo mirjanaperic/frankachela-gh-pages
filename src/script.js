@@ -102,8 +102,9 @@ gsap.utils.toArray(".animation").forEach(element => {
 
 
 //   banner animations
+const bannerTitle = document.getElementById('js-banner-logo');
+
 function logoHide() {
-  const bannerTitle = document.getElementById('js-banner-logo');
   const bannerImg = document.getElementById('js-banner-img');
   
   if(window.scrollY > (bannerImg.clientHeight / 2)) {
@@ -119,4 +120,18 @@ document.addEventListener('scroll', () => {
 
 window.onload = () => {
   logoHide();  
+  positionLogo();
 };
+
+// banner logo position
+function positionLogo() {
+  const bannerInner = document.getElementById('js-banner-inner');
+  let position = bannerInner.clientHeight / 2;
+  const mq = window.matchMedia( "(min-width: 768px)" );
+  if (mq.matches) {
+    bannerTitle.style.top = position + 70 + 'px';
+  } else {
+    bannerTitle.style.top = position + 30 + 'px';
+  }
+  
+}

@@ -13,7 +13,6 @@
 }
 
 .banner__inner {
-    padding: 100px 0;
     padding-top: clamp(4rem, 6vw, 6rem);
     padding-bottom: clamp(4rem, 6vw, 6rem);
 }
@@ -38,19 +37,14 @@
     text-align: center;
     text-transform: uppercase;
     display: block;
+    position: relative;
+    z-index: 1;
 }
 
 .banner__logo-wrap {
     position: fixed;
-    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     // max-width: clamp(56rem, 55vw, 20.2rem);
     max-width: 785px;
-    @media only screen and (max-width: 1440px) {
-        top: 28%;
-    }
-    @media only screen and (max-width: 900px) {
-        top: 15%;
-    }
 }

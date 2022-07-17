@@ -22,10 +22,11 @@
 
 .cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 23%);
     grid-gap: 20px;
+    justify-content: space-evenly;
     @media only screen and (max-width: 1200px) {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 50%);
     }
 }
 
@@ -44,10 +45,13 @@
     &:last-of-type {
         background-color: $card-color-4;
     }
+    @media only screen and (max-width: 1200px) {
+        padding: 20px;
+    }
 }
 
 .card__title {
-    font-size: clamp(2.2rem, 3.3vw, 3rem);
+    font-size: clamp(1.5rem, 3vw, 3rem);
     line-height: 1.5;
     margin-bottom: 40px;
     font-family: $font-secondary-italic;
