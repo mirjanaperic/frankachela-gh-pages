@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Frankachela</title>
+    <link rel="stylesheet" href="../src/scss/style.scss" />
+</head>
+
+<body>
+    <main>
+        <section class="banner">
+            <div class="banner__inner">
+                <h1 class="banner__subtitle">PRODUCTION CATERING & CRAFT</h1>
+                <div class="banner__logo-wrap" id="js-banner-logo">
+                    <img class="banner__logo" src="./images/logo.svg" alt="Frankachela logo">
+                </div>
+            </div>
+            <picture>
+                <source media="(min-width:768px)" srcset="images/banner.svg">
+                <img class="banner__img" id="js-banner-img" src="images/banner-mobile.svg" alt="Banner image">
+            </picture>
+        </section>
+        <section class="about">
+            <div class="wrap">
+                <h2 class="about__title section-title animation">Frankachela is a production catering compoany based in Barcelona, Spain. We specialise in quality cuisine
+                    for film sets, fashion, and advertising productions.</h2>
+                <div class="about__flex">
+                    <div class="about__flex-part about__flex-part--full">
+                        <img class="about__img animation" src="images/about.svg" alt="">
+                    </div>
+                    <div class="about__flex-part about__flex-part--half animation">
+                        <h3 class="about__subtitle">Exceptional Catering Experiences</h3>
+                        <p class="about__text section-text">For almost 20 years, we have specialized in delicious food for the production industry. We cover
+                            the needs of cast and crew wherever required, be it in studios or at locations.At Frankachela,
+                            our team of experts ensure all the productions we work on</p>
+                    </div>
+                    <div class="about__flex-part about__flex-part--half animation">
+                        <h3 class="about__subtitle">Production Catering for Your Entire Cast and Crew</h3>
+                        <p class="about__text section-text">The cornerstone of a successful production is a reliable catering and craft service. Great food and
+                            drink on set boost productivity and teamwork. Therefore, finding the right catering company is
+                            vital. That's where we come in. We work wherever when</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services">
+            <div class="wrap">
+                <h2 class="services__title section-title animation">Catering packages for all budgets</h2>
+                <p class="services__text section-text animation">Whether you want full support from day one, or simply some catering guidance in the days leading up to your
+                    production, together we'll find the catering package that’s right for you.</p>
+                <div class="cards animation">
+                    <div class="card">
+                        <h3 class="card__title">Economical</h3>
+                        <div class="card__img-wrap">
+                            <img class="card__img" src="./images/card-img-1.svg" alt="apple">
+                        </div>
+                        <p class="card__text section-text">Enjoy high-quality cuisine that includes all your favourite dishes. This package is perfect for smaller
+                            productions featuring great-tasting food while keeping costs at a minimum.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card__title">Standard</h3>
+                        <div class="card__img-wrap">
+                            <img class="card__img" src="./images/card-img-2.svg" alt="drumstick">
+                        </div>
+                        <p class="card__text section-text">Relish in more variety with our Standard package. This allows you to add more flavors and tastes
+                            to your table. Perfect for most productions.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card__title">Premium</h3>
+                        <div class="card__img-wrap">
+                            <img class="card__img" src="./images/card-img-3.svg" alt="cake">
+                        </div>
+                        <p class="card__text section-text">If you're looking for a service with more variety and food options featuring a large variety of dishes
+                            and a touch of superior service, this package is for you.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card__title">VIP</h3>
+                        <div class="card__img-wrap">
+                            <img class="card__img" src="./images/card-img-4.svg" alt="cocktail">
+                        </div>
+                        <p class="card__text section-text">We frequently cater to sports stars, actors, and other celebrities. With our VIP package, we create
+                            artful menus flexibly and specific to the wishes of our clients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="wrap">
+                <div class="contact__inner">
+                    <div class="contact__text-inner animation">
+                        <div class="contact__text-img">
+                            <div class="contact__text-wrap">
+                                <h2 class="contact__title section-title">Looking for a film production catering service in Barcelona or beyond? Contact the team at
+                                    Frankachela to discuss your unique location catering needs.</h2>
+                                <p class="contact__text contact__text--desk section-text">Have a question? Want to discuss your catering needs? Contact the Frankachela team for fashion,
+                                    TV, and film production catering solutions and a complete craft service today.</p>
+                            </div>
+                            <div class="contact__img-wrap">
+                                <img class="contact__img" src="./images/contact-img.svg" alt="Suspicious man and cat-woman">
+                            </div>
+                            <p class="contact__text contact__text--mob section-text">Have a question? Want to discuss your catering needs? Contact the Frankachela team for fashion,
+                                TV, and film production catering solutions and a complete craft service today.</p>
+                        </div>
+                    </div>
+                    <form class="form animation" action="submit">
+                        <div class="form__inner">
+                            <div class="form__part">
+                                <label class="form__label" for="name">Name</label>
+                                <input class="form__input" type="text" id="name" placeholder="Present yourself">
+                                <label class="form__label" for="email">Email</label>
+                                <input class="form__input" type="email" id="email" placeholder="hello@ddhdstudio.com">
+                            </div>
+                            <div class="form__part">
+                                <label class="form__label" for="message">Your Message</label>
+                                <textarea class="form__textarea" name="message" id="message" rows="7" placeholder="Tell us what you need"></textarea>
+                            </div>
+                        </div>
+                        <div class="form__btn-wrap">
+                            <button class="form__btn" type="submit">Send
+                                <span class="arrow right"></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="clients animation">
+            <div class="wrap">
+                <div class="clients__inner">
+                    <div class="clients__text-wrap">
+                        <h2 class="clients__title">Who We've worked With</h2>
+                        <p class="clients__text section-text">
+                            We have catered for productions ranging from small fashion shoots and music videos to big-budget advertisings and movies.
+                            We constantly work with world-leading brands and are well known for adding value to the creative
+                            process that a production requires. Some of the leading brands we’ve worked with include:
+                        </p>
+                    </div>
+                    <div class="marquee">
+                        <div class="clients__images">
+                            <div class="clients__img-wrap">
+                                <img class="clients__img" src="./images/logo-1.png" alt="Ford logo">
+                            </div>
+                            <div class="clients__img-wrap">
+                                <img class="clients__img" src="./images/logo-2.png" alt="Burberry logo">
+                            </div>
+                            <div class="clients__img-wrap">
+                                <img class="clients__img" src="./images/logo-3.png" alt="Mont Blanc logo">
+                            </div>
+                            <div class="clients__img-wrap">
+                                <img class="clients__img" src="./images/logo-4.png" alt="Nike logo">
+                            </div>
+                            <div class="clients__img-wrap">
+                                <img class="clients__img" src="./images/logo-5.png" alt="Fendi logo">
+                            </div>
+                            <div class="clients__img-wrap">
+                                <img class="clients__img" src="./images/logo-6.png" alt="W logo">
+                            </div>
+                            <div class="clients__img-wrap">
+                                <img class="clients__img" src="./images/logo-7.png" alt="H&M logo">
+                            </div>
+                            <div class="clients__img-wrap">
+                                <img class="clients__img" src="./images/logo-8.png" alt="Ikea logo">
+                            </div>
+                            <div class="clients__img-wrap">
+                                <img class="clients__img" src="./images/logo-9.png" alt="Tommy Hilfiger logo">
+                            </div>
+                            <div class="clients__img-wrap">
+                                <img class="clients__img" src="./images/logo-10.png" alt="Adidas logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="wrap wrap--wide">
+            <div class="footer__inner">
+                <div class="footer__logo-wrap">
+                    <img class="footer__logo" src="./images/logo-white.svg" alt="Frankachela logo">
+                </div>
+                <a class="footer__text footer__text--email" href="mailto:catering@frankachela.com">catering@frankachela.com</a>
+                <a class="footer__text footer__text--tel" href="tel:+34685694648">+34 685 694 648</a>
+                <span class="footer__text footer__text--address">Carrer Treball 69, 08019 Barcelona</span>
+            </div>
+        </div>
+    </footer>
+    <script src="../src/script.js" type="module"></script>
+</body>
+
+</html>

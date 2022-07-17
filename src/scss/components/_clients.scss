@@ -1,0 +1,78 @@
+.clients {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.clients__inner {
+    @media only screen and (min-width: 768px) {
+        padding: 180px 160px;
+    }
+    @media only screen and (max-width: 767px) {
+       padding: 55px 0 95px;
+    }
+}
+
+.clients__text-wrap {
+    display: flex;
+    margin-bottom: 160px;
+    @media only screen and (max-width: 767px) {
+       flex-wrap: wrap;
+       margin-bottom: 40px;
+    }
+}
+
+.clients__title {
+    font-size: clamp(1.15rem, 2.2vw, 2rem);
+    margin-right: 100px;
+    flex: 0 0 20%;
+    @media only screen and (max-width: 767px) {
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin-bottom: 25px;
+    }
+}
+
+.clients__text {
+    flex: 0 0 60%;
+    @media only screen and (max-width: 767px) {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+}
+
+.clients__images {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    // animation: chyron 10s infinite linear;
+    // &:hover {
+    //     animation-play-state: paused;
+    // }
+}
+
+.clients__img-wrap {
+    flex: 0 0 150px;    
+    max-width: 150px;
+    margin-right: 90px;
+}
+
+.clients__img {
+    max-width: 100%;
+    height: auto;
+}
+
+// @keyframes chyron {
+//   from { 
+//     transform: translateX(150%); 
+// }
+//   to { 
+//     transform: translateX(-150%); 
+//     }
+// }
+
+// @keyframes marquee {
+//     0% { left: 0; }
+//     100% { left: -100%; }
+// }
+

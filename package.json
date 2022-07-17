@@ -1,0 +1,30 @@
+{
+  "name": "frankachela-gh-pages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "parcel ./*.html",
+    "predeploy": "rm -rf dist && parcel build ./*.html --public-url https://github.com/mirjanaperic/frankachela-gh-pages",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirjanaperic/frankachela-gh-pages.git"
+  },
+  "author": "Mirjana Peric",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mirjanaperic/frankachela-gh-pages/issues"
+  },
+  "homepage": "https://github.com/mirjanaperic/frankachela-gh-pages#readme",
+  "dependencies": {
+    "gh-pages": "^4.0.0",
+    "gsap": "^3.10.4",
+    "parcel": "^2.6.2"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2"
+  }
+}

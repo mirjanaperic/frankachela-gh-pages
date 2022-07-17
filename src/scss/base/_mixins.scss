@@ -1,0 +1,24 @@
+@mixin main {
+	*,
+	*::after,
+	*::before {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+}
+@mixin linkStyle {
+	text-decoration: none;
+	color: $main_text_color;
+	&:visited { text-decoration: none; color: $main_text_color}
+	&:focus { text-decoration: none; color: $main_text_color}
+	&:active { text-decoration: none; color: $main_text_color}
+	&:hover { text-decoration: none;}
+} 
+@mixin transition($transition...) {
+	-moz-transition:    $transition;
+	-o-transition:      $transition;
+	-webkit-transition: $transition;
+	transition:         $transition;
+}
+

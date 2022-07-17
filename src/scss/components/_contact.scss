@@ -1,0 +1,194 @@
+.contact {
+    width: 100%;
+    position: relative;
+    background-color: $card-color-1;
+}
+
+.contact__inner {
+    @media only screen and (min-width: 768px) {
+        padding: 154px 70px 135px;
+    }
+    @media only screen and (max-width: 767px) {
+        padding: 100px 0;
+    }
+}
+
+.contact__text-inner {
+    padding: 154px 0 134px;
+}
+
+.contact__text-img {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+    @media only screen and (max-width: 767px) {
+        flex-wrap: wrap;
+    }
+}
+
+.contact__title {
+    margin-bottom: 2.8rem;
+}
+
+.contact__text-wrap {
+    max-width: 51%;
+    flex: 0 0 51%;
+    @media only screen and (max-width: 767px) {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+}
+
+.contact__text--desk {
+    @media only screen and (max-width: 767px) {
+       display: none;
+    }
+}
+
+.contact__text--mob {
+    @media only screen and (min-width: 768px) {
+       display: none;
+    }
+}
+
+.contact__img-wrap {
+    max-width: 47%;
+    flex: 0 0 47%;
+    @media only screen and (max-width: 767px) {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+}
+
+.contact__img {
+    @media only screen and (max-width: 767px) {
+        display: block;
+        margin: 0 auto 48px;
+    }
+}
+
+.arrow {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    position: relative;
+  
+    &::before {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 30px;
+      top: 50%;
+      left: 50%;
+      border-style: solid;
+      border-color: $main-color;
+      border-width: 2px 2px 0 0;
+      position: absolute;
+      transform-origin: 50% 50%;
+    }
+    &.right::before { 
+        transform: rotate(45deg); 
+        margin: -15px 0 0 -20px;
+    }
+    &::after {
+        content: '';
+        display: block;
+        top: 50%;
+        left: 50%;
+        border-style: solid;
+        border-color: $main-color;
+        position: absolute;
+        transform-origin: 50% 50%;
+    }
+    &.right::after { 
+        width: 40px;
+        height: 0;
+        border-width: 2px 0 0 0;
+        transform: translate(-26px, -1px);
+    }
+}  
+
+.form {
+    width: 100%;
+}
+
+.form__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (max-width: 767px) {
+        flex-wrap: wrap;
+    }
+}
+
+.form__part {
+    max-width: 48%;
+    flex: 0 0 48%;
+    @media only screen and (max-width: 767px) {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+}
+
+.form__label {
+    display: block;
+    font-size: clamp(1.2rem, 2.2vw, 2rem); 
+    margin-bottom: 25px;
+    @media only screen and (max-width: 767px) {
+        margin-bottom: 15px;
+    }
+}
+
+.form__input {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid $main-color;
+    width: 100%;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    background-color: $card-color-1;
+    @media only screen and (min-width: 768px) {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+    }
+}
+
+.form__textarea {
+    width: 100%;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid $main-color;
+    padding-bottom: 25px;
+    font-size: clamp(0.75rem, 1.38vw, 1.25rem);
+    resize: none;
+    background-color: $card-color-1;
+    @media only screen and (max-width: 767px) {
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+    }
+}
+
+.form__btn-wrap {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form__btn {
+    font-family: $font-secondary-italic;
+    font-size: clamp(3.4rem, 3.3vw, 1rem);
+    background-color: transparent;
+    border: 0;
+    color: $main-color;
+    display: flex;
+    padding: 10px;
+    &:focus {
+        border: 1px solid $main-color;
+    }
+}
