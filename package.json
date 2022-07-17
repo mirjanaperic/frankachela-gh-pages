@@ -2,12 +2,14 @@
   "name": "frankachela-gh-pages",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  
   "scripts": {
-    "test": "test",
-    "start": "parcel ./*.html",
-    "predeploy": "rm -rf dist && parcel build ./*.html --public-url https://github.com/mirjanaperic/frankachela-gh-pages",
-    "deploy": "gh-pages -d dist"
+    "start": "parcel ./src/index.html",
+    "prebuild-dev": "shx rm -rf dist/*",
+    "build-dev": "parcel build ./src/index.html --no-optimize --public-url https://github.com/mirjanaperic/frankachela-gh-pages",
+    "prebuild": "shx rm -rf dist/*",
+    "build": "parcel build ./src/index.html --public-url https://github.com/mirjanaperic/frankachela-gh-pages",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "repository": {
     "type": "git",
@@ -18,11 +20,11 @@
   "bugs": {
     "url": "https://github.com/mirjanaperic/frankachela-gh-pages/issues"
   },
-  "homepage": "https://github.com/mirjanaperic/frankachela-gh-pages#readme",
   "dependencies": {
     "gh-pages": "^4.0.0",
     "gsap": "^3.10.4",
-    "parcel": "^2.6.2"
+    "parcel": "^2.6.2",
+    "shx": "^0.3.4"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.2"
