@@ -129,9 +129,44 @@ function positionLogo() {
   let position = bannerInner.clientHeight / 2;
   const mq = window.matchMedia( "(min-width: 768px)" );
   if (mq.matches) {
-    bannerTitle.style.top = position + 80 + 'px';
+    bannerTitle.style.top = position + 120 + 'px';
   } else {
     bannerTitle.style.top = position + 30 + 'px';
   }
   
+}
+
+
+// Google form
+let url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSf7PzkdVaHyDn7EcZ8XQFaxon87KG22re5Gxsd2FtP7O3e7Rw/formResponse"; //action url
+let form = document.querySelector("#form"); //form element
+
+form.addEventListener("submit", (e)=>{
+    e.preventDefault();//prevent default behaviour
+
+    fetch(url,{
+        method: "POST",
+        mode: "no-cors",
+        header:{
+            'Content-Type': 'application/json'
+            },
+        body: getInputData()
+    })
+    .then(data=>{
+        console.log(data);
+        alert("Form Submitted");
+    })
+    .catch(err=>console.error(err)); //promise based
+});
+
+//populating input data
+function getInputData(){
+    let dataToPost = new FormData(); //formdata API
+
+    //fill name attributes to corresponding values
+    dataToPost.append("entry.442889035", document.querySelector("#name").value);
+    dataToPost.append("emailAddress", document.querySelector("#email").value);
+    dataToPost.append("entry.1431261949", document.querySelector("#message").value);
+
+    return dataToPost;
 }

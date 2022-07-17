@@ -192,3 +192,7 @@
         border: 1px solid $main-color;
     }
 }
+
+input:invalid, textarea:invalid {
+    background-color: transparent;
+}
