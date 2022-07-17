@@ -129,9 +129,8 @@ function positionLogo() {
   let position = bannerInner.clientHeight / 2;
   const mq = window.matchMedia( "(min-width: 768px)" );
   if (mq.matches) {
-    bannerTitle.style.top = position + 70 + 'px';
+    bannerTitle.style.top = position + 75 + 'px';
   } else {
     bannerTitle.style.top = position + 30 + 'px';
-  }
-  
+  }  
 }
