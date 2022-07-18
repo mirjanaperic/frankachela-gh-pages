@@ -12,16 +12,18 @@
 <body>
     <main>
         <section class="banner">
-            <div class="banner__inner" id="js-banner-inner">
-                <h1 class="banner__subtitle">PRODUCTION CATERING & CRAFT</h1>
-                <div class="banner__logo-wrap" id="js-banner-logo">
-                    <img class="banner__logo" src="./images/logo.svg" alt="Frankachela logo">
+            <div class="wrap">
+                <div class="banner__inner" id="js-banner-inner">
+                    <h1 class="banner__subtitle">PRODUCTION CATERING & CRAFT</h1>
+                    <div class="banner__logo-wrap" id="js-banner-logo">
+                        <img class="banner__logo" src="./images/logo.svg" alt="Frankachela logo">
+                    </div>
                 </div>
+                <picture>
+                    <source media="(min-width:768px)" srcset="images/banner.svg">
+                    <img class="banner__img" id="js-banner-img" src="images/banner-mobile.svg" alt="Banner image">
+                </picture>
             </div>
-            <picture>
-                <source media="(min-width:768px)" srcset="images/banner.svg">
-                <img class="banner__img" id="js-banner-img" src="images/banner-mobile.svg" alt="Banner image">
-            </picture>
         </section>
         <section class="about">
             <div class="wrap">
@@ -105,7 +107,8 @@
                                 TV, and film production catering solutions and a complete craft service today.</p>
                         </div>
                     </div>
-                    <form class="form animation" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf7PzkdVaHyDn7EcZ8XQFaxon87KG22re5Gxsd2FtP7O3e7Rw/formResponse" method="post" id="form">
+                    <form class="form animation" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf7PzkdVaHyDn7EcZ8XQFaxon87KG22re5Gxsd2FtP7O3e7Rw/formResponse"
+                        method="post" id="form">
                         <div class="form__inner">
                             <div class="form__part">
                                 <label class="form__label" for="name">Name</label>

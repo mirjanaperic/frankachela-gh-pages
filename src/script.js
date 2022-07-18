@@ -19,9 +19,9 @@ function Marquee(selector, speed) {
   const firstElement = parentSelector.children[0];
   let i = 0;
   
-  parentSelector.insertAdjacentHTML('beforeend', clone);
-//   parentSelector.children[0].insertAdjacentHTML('beforeend', clone);
-//   parentSelector.children[0].insertAdjacentHTML('beforeend', clone);
+  // parentSelector.insertAdjacentHTML('beforeend', clone);
+  parentSelector.children[0].insertAdjacentHTML('beforeend', clone);
+  parentSelector.children[0].insertAdjacentHTML('beforeend', clone);
 
   setInterval(function () {
     firstElement.style.marginLeft = `-${i}px`;
@@ -34,7 +34,7 @@ function Marquee(selector, speed) {
   }, 0);
 }
 
-// window.addEventListener('load', Marquee('.marquee', 0.2));
+// window.addEventListener('load', Marquee('.marquee', 2));
 
 
 // loop through each "h2" element and create an animation/ScrollTrigger for each
@@ -42,12 +42,13 @@ gsap.utils.toArray(".animation").forEach(element => {
   gsap.to(element, {
     opacity: 1, 
     ease: "none",
+    // y: "-=50px",
     scrollTrigger: {
       trigger: element,
-      start: "center 80%",
-      end: "center 5%",
+      start: "center 90%",
+      end: "center 0%",
       // markers: true,
-      // toggleActions: "play reverse play reverse"
+      toggleActions: "play reverse play reverse"
     }
   })
 });
@@ -74,30 +75,22 @@ gsap.utils.toArray(".animation").forEach(element => {
 //     }
 //   });
 
+  
+  // gsap.set(".clients__img-wrap", {
+  //   x: (i) => i * 50
+  // });
+  
   // gsap.to(".clients__img-wrap", {
   //   duration: 5,
   //   ease: "none",
-  //   x: "-=500", 
+  //   x: "-=500",
   //   modifiers: {
-  //     x: gsap.utils.unitize(x => parseFloat(x) % 500) 
+  //     x: gsap.utils.unitize(x => parseFloat(x) % 500)
   //   },
   //   repeat: -1
   // });
-  
-  gsap.set(".clients__img-wrap", {
-    x: (i) => i * 50
-  });
-  
-  
-  gsap.to(".clients__img-wrap", {
-    duration: 5,
-    ease: "none",
-    x: "-=500", //move each box 500px to right
-    modifiers: {
-      x: gsap.utils.unitize(x => parseFloat(x) % 500) //force x value to be between 0 and 500 using modulus
-    },
-    repeat: -1
-  });
+
+
 
 
 
@@ -141,7 +134,7 @@ function positionLogo() {
 let url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSf7PzkdVaHyDn7EcZ8XQFaxon87KG22re5Gxsd2FtP7O3e7Rw/formResponse"; //action url
 let form = document.querySelector("#form"); //form element
 
-form.addEventListener("submit", (e)=>{
+form.addEventListener("submit", (e) => {
     e.preventDefault();//prevent default behaviour
 
     fetch(url,{
@@ -152,11 +145,14 @@ form.addEventListener("submit", (e)=>{
             },
         body: getInputData()
     })
-    .then(data=>{
-        console.log(data);
-        alert("Form Submitted");
+    .then(data => {
+      // console.log(data);
+      alert("Form Submitted");
+      document.querySelector("#name").value = '';
+      document.querySelector("#email").value = '';
+      document.querySelector("#message").value = '';
     })
-    .catch(err=>console.error(err)); //promise based
+    .catch(err => console.error(err)); //promise based
 });
 
 //populating input data
